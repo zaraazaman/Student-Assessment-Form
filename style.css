@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+:root {
+  --bg-top: #f2f6ff;
+  --bg-bottom: #e7f0ff;
+  --card: #ffffff;
+  --ink: #1c2333;
+  --muted: #5a657a;
+  --line: #d9e0ef;
+  --accent: #2e6bff;
+  --accent-dark: #1f4fd1;
+  --shadow: 0 18px 40px rgba(18, 32, 61, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 32px 16px 48px;
+  color: var(--ink);
+  background: linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 8px 18px rgba(16, 24, 40, 0.18));
+}
+
+h2,
+h3 {
+  color: var(--ink);
+  margin: 18px 0 10px;
+}
+
+.required-field::before {
+  content: "* ";
+  color: #d62828;
+  font-weight: 700;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.section-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line), transparent);
+  margin: 26px 0;
+}
+
+.assessment-form h2 {
+  margin-top: 26px;
+}
+
+.assessment-form {
+  max-width: 860px;
+  margin: 12px auto 0;
+  padding: 28px 28px 32px;
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #f9fbff;
+  color: var(--ink);
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(46, 107, 255, 0.18);
+  background: #ffffff;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--accent);
+  margin-right: 8px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 10px;
+  background: var(--accent);
+  color: #fff;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 8px 18px rgba(46, 107, 255, 0.25);
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+footer {
+  max-width: 860px;
+  margin: 18px auto 0;
+  color: var(--muted);
+}
+
+footer p {
+  margin: 6px 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 24px 12px 36px;
+  }
+
+  .assessment-form {
+    padding: 22px 18px 26px;
+  }
+
+  input[type="submit"],
+  input[type="button"] {
+    width: 100%;
+    margin: 8px 0 0;
+  }
+}

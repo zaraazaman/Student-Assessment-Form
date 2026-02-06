@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Assessment Form</title>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <img src="logo.png" alt="Description" width="250px" height="250px">
+        </div>
+
+    <h2 style="text-align:center; font-size: 33px; font-family: Arial, Helvetica, sans-serif;">Student Assessment Form</h2>
+    <form action="action_page.php" class="assessment-form">
+        <p style="text-align:center; font-size: 17px; font-family: Arial, Helvetica, sans-serif">The purpose of this form is to gather essential academic data, enabling the Academic Support Team<br> to provide you with the most relevant and customized support for your semester.<br> We maintain the <em><strong>highest </strong></em>standards of data privacy;<br> All information is strictly confidential and restricted to the Academic Support Team's use.</p>
+        <br>
+        <p style="text-align:left; font-family:Arial, Helvetica, sans-serif; font-size: 13px;"><i><strong>Note: </strong>Your email will not be shared with the authorities.</i></p>
+        <hr class="section-divider">
+        <br>
+    
+        <h2 class="required-field" style="font-family:Arial, Helvetica, sans-serif">Full Name</h2>
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:17px">
+            <label for="name"></label>
+            <input type="text" placeholder="Enter full name" id="name" name="user_name" required>
+        </div>
+        <br>
+        <hr class="section-divider">
+
+        <h2 class="required-field" style="font-family:Arial, Helvetica, sans-serif">Roll Number</h2>
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:17px">
+            <label for="roll number"></label>
+            <input type="number" placeholder="Enter roll no." id="roll_no" name="user_roll" required>
+        </div>
+        <br>
+        <hr class="section-divider">
+
+        <h2 class="required-field" style="font-family: Arial, Helvetica, sans-serif;">Program</h2>
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:17px">
+            <input type="checkbox" id="course_1" name="course_1" value="course_1">
+            <label for="course_1">Artificial Intelligence (AI)</label><br>
+
+            <input type="checkbox" id="course_2" name="course_2" value="course_2">
+            <label for="course_2">Cyber Security (CYS)</label><br>
+            
+            <input type="checkbox" id="course_3" name="course_3" value="course_3">
+            <label for="course_3">Software Engineering (SE)</label><br>
+
+            <input type="checkbox" id="course_4" name="course_4" value="course_4">
+            <label for="course_4">Data Science (DS)</label><br>
+        </div>
+        <br>
+        <hr class="section-divider">
+
+        <h2 class="required-field" style="font-family: Arial, Helvetica, sans-serif;">Marks Obtained</h2>
+        <h3 style="font-family: Arial, Helvetica, sans-serif;">Design and Analysis of Algorithms</h3>
+        <div>
+            <label for="marks1"></label>
+            <input type="number" placeholder="Your answer" id="marks1" name="marks1" required>
+        
+            <h3 style="font-family: Arial, Helvetica, sans-serif;">Deep Learning</h3>
+            <label for="marks2"></label>
+            <input type="number" placeholder="Your answer" id="marks2" name="marks2" required>
+
+            <h3 style="font-family: Arial, Helvetica, sans-serif;">Biomedical Data Processing and Analysis</h3>
+            <label for="marks3"></label>
+            <input type="number" placeholder="Your answer" id="marks3" name="marks3" required>
+            
+            <h3 style="font-family: Arial, Helvetica, sans-serif;">Knowledge Representation and Reasoning</h3>
+            <label for="marks4"></label>
+            <input type="number" placeholder="Your answer" id="marks4" name="marks4" required>
+            
+            <h3 style="font-family: Arial, Helvetica, sans-serif;">Expository Writing</h3>
+            <label for="marks5"></label>
+            <input type="number" placeholder="Your answer" id="marks5" name="marks5" required>
+            
+            <h3 style="font-family: Arial, Helvetica, sans-serif;">Operating Systems</h3>
+            <label for="marks6"></label>
+            <input type="number" placeholder="Your answer" id="marks6" name="marks6" required>
+        </div>
+        <br>
+        <hr class="section-divider">
+
+        <h2 class="required-field" style="font-family: Arial, Helvetica, sans-serif;">Intermediate Program</h2>
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:17px"> 
+        <label for="subject"></label>
+            <select id="subject" name="lists">
+                <option value="med">Pre-medical</option>
+                <option value="eng">Pre-engineering</option>
+                <option value="com">Computer Science</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <hr class="section-divider">
+
+        <h2 class="required-field" style="font-family: Arial, Helvetica, sans-serif;">Session</h2>
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:17px">
+            <label for="time"></label>
+            <input type="radio" id="morning" name="session" value="morning">
+            <label for="morning">Morning</label><br>
+            <input type="radio" id="afternoon" name="session" value="afternoon">
+            <label for="afternoon">Afternoon</label><br>
+            <input type="radio" id="evening" name="session" value="evening">
+            <label for="evening">Evening</label>
+        </div>
+        <br>
+        <br>
+        <hr class="section-divider">
+        
+
+        <h2 style="font-family: Arial, Helvetica, sans-serif;">Comments (optional)</h2>
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:17px">
+            <label for="comments"></label>
+            <textarea id="comments" name="comments" placeholder="Enter your comments here..." rows="4" cols="50"></textarea>
+        </div>
+        <br>
+
+        <div style="text-align:left; font-family: Arial, Helvetica, sans-serif;font-size:20px;">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear form">
+        </div>
+        <br>
+        <br>
+        
+    </form>
+    </body>
+    <footer style="text-align: left; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 14px;">
+        <p><i>Never submit passwords through Google Forms.</i></p>
+    </footer>
+    <footer
+        style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 15px;">
+        <p>This form was created inside of Air University. - Contact form owner</p>
+        <p>Does this form look suspicious? Report</p>
+        <br>
+    </footer>
+    <footer style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 28px;">
+        <p>Google Forms</p>
+    </footer>
+    </body>
+</html>
